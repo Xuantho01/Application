@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student management systems </title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src = js/student.js></script>
+</head>
+<body>
+<div id="dialog">
+    <h3>THÊM SINH VIÊN</h3>
+    <table>
+        <tr><td>Mã sinh viên</td><td><input type="text" id="id"></td></tr>
+        <tr><td>Họ Tên</td><td><input type="text" id="fullname"></td></tr>
+        <tr><td>Ngày Sinh</td><td><input type="date" id="DOB"></td></tr>
+        <tr><td>Giới Tính</td><td>
+            <input type="radio" value="Nam" name="sex">Name
+            <input type="radio" value="Nữ" name="sex">Nữ
+        </td></tr>
+        <tr>
+            <td>Lớp</td>
+            <td>
+            <select id="class">
+                <option value="C0919H">C0919H</option>
+                <option value="C1019H">C1019H</option>
+                <option value="C0919H">C0919H</option>
+                <option value="C0919H">C0919H</option>
+                <option value="C0919H">C0919H</option>
+            </select>
+        </td>
+        </tr>
+        <tr>
+            <td><button onclick="addStudent()">Nhập</button></td>
+            <td><button onclick="closeDialog()">Đóng</button></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <h2>QUẢN LÝ SINH VIÊN</h2>
+    <a href="#" onclick="openDialog()">Thêm sinh viên</a>
+    <a href="#" onclick="refreshList()">Cập nhật danh sách</a>
+    <table id="content" border="1px">
+       <thead>
+       <tr>
+            <th>Mã Sinh viên</th>
+           <th><a title="Kích vào đây để sắp xếp theo họ tên" onclick="orderByFullname()">Họ tên</a></th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th>Lớp</th>
+            <th>Thao tác</th>
+        </tr>
+       </thead>
+       <tbody>
+
+       </tbody>
+   </table>
+</div>
+</body>
+</html>
